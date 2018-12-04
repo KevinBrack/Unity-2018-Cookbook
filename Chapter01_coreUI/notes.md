@@ -66,4 +66,52 @@ This project required 2 script files. The first was a `CountdownTimer` class tha
 
 **Note: When these scripts ran I was expecting the timer to run for 30 seconds, but it ended up running for 60 seconds. Need to track this down.**
 
-Also we added both scripts to the inspector, but we could have just added the `DigitalCountdown` script if we used the syntax `RequireComponent(CountdownTimer)` directly above the class declaration. This will automatically create a new instance of the class for us.
+Also we added both scripts to the inspector, but we could have just added the `DigitalCountdown` script if we used the syntax
+
+```
+[RequireComponent(typeof (CountdownTimer))]
+```
+
+directly above the class declaration. This will automatically create a new instance of the class for us.
+
+## 04 - Crating a message that fades away
+
+Starts with a copy of the previous level and modifies it from there. It reuses the `CountdownTimer` class but not the `DigitalCountdown`. We will be writing a new script called `FadeAway`
+
+In fact we removed the instance of CountdownTimer all together and used the `RequireComponent` syntax described above to pull a new instance into the `FadeAway` class.
+
+**Interresting note. I thought the `CountdownTimer` function was not going to show in the inspector window, but since it was required, when I added the instance of `Fade Away` it auto populated both script components**
+
+Also the next part was so cool I am dropping the script in the notes for reference
+
+```
+using UnityEngine;
+using UnityEngine.UI;
+
+[RequireComponent (typeof (CountdownTimer))]
+public class FadeAway : MonoBehaviour {
+	private CountdownTimer countdownTimer;
+	private Text textUI;
+
+	void Awake () {
+		textUI = GetComponent<Text>();
+		countdownTimer = GetComponent<CountdownTimer>();
+	}
+
+	void Start () {
+		countdownTimer.ResetTimer(5);
+	}
+
+	void Update () {
+		float alphaRemaining = countdownTimer.GetProportionTimeRemaining();
+		print (alphaRemaining);
+		Color c = textUI.color;
+		c.a = alphaRemaining;
+		textUI.material.color = c;
+	}
+}
+```
+
+Notice in the `Update` method we are retrieving the current color of the Text object. Next it assigns an alpha channel to the copy of the color. Finally it takes the orrigional Text Object and replaces the color with the modified color.
+
+Because we are using a float we get a smooth transition, and as the time remaining goes down the color becomes more transparent **woot**!
