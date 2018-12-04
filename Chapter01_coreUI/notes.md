@@ -59,3 +59,11 @@ We set a variable to the component we want to access `bananna` and access it's t
 We get the component in the `Awake(){}` method and update the string every frame with the `Update(){}` method
 
 ## 03 - Displaying a digital count-down timer
+
+Project includes the scripts `CountdownTimer.cs` and `DigitalCountdown.cs`
+
+This project required 2 script files. The first was a `CountdownTimer` class that had all the functions necessary to operate the timer. The second one was `DigitalCountdown` that was specific to this game Object only. The `DigitalCountdown` script called a new instance of `CountdownTimer`. `DigitalCountdown` connected to the Text Object that it needed to overwrite and called functions on the instance of `CountdownTimer` passing it things like the number of seconds we wanted to set when starting the timer.
+
+**Note: When these scripts ran I was expecting the timer to run for 30 seconds, but it ended up running for 60 seconds. Need to track this down.**
+
+Also we added both scripts to the inspector, but we could have just added the `DigitalCountdown` script if we used the syntax `RequireComponent(CountdownTimer)` directly above the class declaration. This will automatically create a new instance of the class for us.
