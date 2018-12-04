@@ -115,3 +115,7 @@ public class FadeAway : MonoBehaviour {
 Notice in the `Update` method we are retrieving the current color of the Text object. Next it assigns an alpha channel to the copy of the color. Finally it takes the orrigional Text Object and replaces the color with the modified color.
 
 Because we are using a float we get a smooth transition, and as the time remaining goes down the color becomes more transparent **woot**!
+
+**One more note! If we now try to remove the CountdownTimer component from the inspector we get an alert saying "Can not remove: required by Fade Away Script"**
+
+## Displaying a 3D text mesh
