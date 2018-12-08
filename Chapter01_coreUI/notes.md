@@ -133,3 +133,15 @@ For this project we started with the 3D template. The instructions said that tex
 TMP requires SDF fonts. They were missing from the follow along assets repo. I found them in a repo dedicated to this project. I went ahead and forked the origional assets repo, added the fonts, removed a duplicate copy of the chapter 3 assets that were in the chapter one folder, and submitted a PR. Figured it was better to propose a fix instead of complaining about it. Only time will tell if it gets merged to the main asset repo, but it would be awesome to contribute and help those who take this journey after me.
 
 Unfortunately after all that, the TextMesh Pro object would not accept the new fonts. Might be because of using the free version. Final result using the default font was a little underwhelming.
+
+## Displaying an image
+
+Project is starting with the 2D template.
+
+To start with they requested a game resolution of 400 x 300. We achieved this by going to the `Game` tab, selecting the current aspect ratio, and creating a new preset.
+
+To get an image game object, in the heirarchy window you right click and select `UI` => `Raw Image`.
+
+In the inspector of the RawImage object we add the image by selecting Texture, and setting it to the image file. Then click the `Set Native Size` button to remove the aspect ratio distortion.
+
+Then we used the `Rect Transform` window to position the image top, and center.
