@@ -119,3 +119,9 @@ Because we are using a float we get a smooth transition, and as the time remaini
 **One more note! If we now try to remove the CountdownTimer component from the inspector we get an alert saying "Can not remove: required by Fade Away Script"**
 
 ## Displaying a 3D text mesh
+
+Now using the 3D template. Created `Scrollz` C# script to handle the movement.
+
+`Scrollz` is accessing `transform.position` and `transform.TransformDirection(0, 1, 0)` in order to move the text up in the y axis.
+
+We also edited the FOV (Field of view) of the main camera to it's highest position to make sure the text dissapeared to a vanishing point.
