@@ -145,3 +145,17 @@ To get an image game object, in the heirarchy window you right click and select 
 In the inspector of the RawImage object we add the image by selecting Texture, and setting it to the image file. Then click the `Set Native Size` button to remove the aspect ratio distortion.
 
 Then we used the `Rect Transform` window to position the image top, and center.
+
+## Creating UIs with the Fungus open source dialogue system.
+
+The Fungus dialogue system is a free UI tool for Unity that uses flow charts to handle the dialogue design.
+
+We will be working in the 2D template for this exercise.
+
+The the tool was downloaded from the unity asset store by searching `Fungus`. It is the package by developer Fungus Games.
+
+We add a Fungus flowchart to the hierarchy panel by going to the top menu and selecting `tools` => `Fungus` => `Create` => `Flowchart`.
+
+We access the flowchart by going to `tools` => `Fungus` => `Flowchart Window`.
+
+In the flow chart we select the only node in it, go to the inspector, change the name, and add a new command by pressing `[+]` => `narritive` => `say` in the inspector.
