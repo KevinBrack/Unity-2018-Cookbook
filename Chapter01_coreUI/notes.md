@@ -125,3 +125,11 @@ Now using the 3D template. Created `Scrollz` C# script to handle the movement.
 `Scrollz` is accessing `transform.position` and `transform.TransformDirection(0, 1, 0)` in order to move the text up in the y axis.
 
 We also edited the FOV (Field of view) of the main camera to it's highest position to make sure the text dissapeared to a vanishing point.
+
+## Creating sophisticated text with text mesh pro
+
+For this project we started with the 3D template. The instructions said that text mesh pro may be incorporated into the core of unity in the future. When I added the TextMesh Pro UI object I was prompted to import TMP essentials. The old way of importing from the Unity Store broke the project origionally but this method is working.
+
+TMP requires SDF fonts. They were missing from the follow along assets repo. I found them in a repo dedicated to this project. I went ahead and forked the origional assets repo, added the fonts, removed a duplicate copy of the chapter 3 assets that were in the chapter one folder, and submitted a PR. Figured it was better to propose a fix instead of complaining about it. Only time will tell if it gets merged to the main asset repo, but it would be awesome to contribute and help those who take this journey after me.
+
+Unfortunately after all that, the TextMesh Pro object would not accept the new fonts. Might be because of using the free version. Final result using the default font was a little underwhelming.
