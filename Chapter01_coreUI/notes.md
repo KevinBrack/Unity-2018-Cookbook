@@ -160,6 +160,6 @@ We access the flowchart by going to `tools` => `Fungus` => `Flowchart Window`.
 
 In the flow chart we select the only node in it, go to the inspector, change the name, and add a new command by pressing `[+]` => `narritive` => `say` in the inspector.
 
-# Creating a Fungus character dialague with images
+## Creating a Fungus character dialague with images
 
 In order to add an image you need to add a character. After we add the characters and images, when we add a say command to the base node, we select a character, and the image we added. Then add the text.
