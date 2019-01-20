@@ -8,4 +8,4 @@ Documenting my progress through Unity 2018 Cookbook Third Edition.
 
 [Chapter 02-Interactive-UI notes](https://github.com/KevinBrack/Unity-2018-Cookbook/blob/master/Chapter02_interactiveUI/ntoes.md)
 
-[Chapter 02-Interactive-UI scripts](https://github.com/KevinBrack/Unity-2018-Cookbook/tree/master/Chapter02_interactiveUI)
+[Chapter 02-Interactive-UI scripts](https://github.com/KevinBrack/Unity-2018-Cookbook/tree/master/Chapter02_interactiveUI/_Scripts)
